@@ -1,0 +1,229 @@
+:root {
+  --main-dark-color: hsl(229, 57%, 11%);
+  --main-light-color: hsl(228, 56%, 26%);
+  --main-padding: 30px;
+  --main-letter-spacing: 0.8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+}
+
+main {
+  background-color: var(--main-dark-color);
+}
+
+.container {
+  max-width: 1440px;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.main-content {
+  width: 60%;
+  display: flex;
+  gap: 25px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.main-card {
+  background-color: var(--main-light-color);
+  padding: var(--main-padding);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-top-right-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  flex-basis: 20%;
+}
+
+.main-card .logo {
+  margin-bottom: 15px;
+}
+
+.main-card .icons {
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+}
+
+.main-card .icons img {
+  background-color: var(--main-dark-color);
+  padding: 12px 7px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.storage-card {
+  background-color: var(--main-light-color);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: var(--main-padding);
+  flex-basis: 50%;
+  flex-grow: 1;
+  height: 130px;
+  position: relative;
+}
+
+.storage-card .storage-detail {
+  color: hsl(243, 100%, 93%);
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: var(--main-letter-spacing);
+}
+
+.storage-card strong {
+  color: hsl(243, 100%, 93%);
+}
+
+.storage-card .bar .bar-bg {
+  height: 20px;
+  width: 100%;
+  background-color: var(--main-dark-color);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+}
+
+.storage-card .bar .bar-fg {
+  height: 80%;
+  width: 75%;
+  background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  margin: 0 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.storage-card .bar .bar-knob {
+  height: 12px;
+  width: 12px;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-right: 3px;
+}
+
+.storage-card .bar-state {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: hsl(243, 100%, 93%);
+  letter-spacing: var(--main-letter-spacing);
+}
+
+.storage-card .storage-state {
+  width: 140px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 30px;
+  margin-top: -45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.storage-card .storage-state::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  bottom: -20px;
+  right: 0;
+  border: 20px solid #fff;
+  border-color: transparent #fff transparent transparent;
+}
+
+.storage-card .storage-state .storage-left-space {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.storage-card .storage-state p {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-left: 10px;
+  color: hsl(229, 7%, 55%);
+  text-transform: uppercase;
+  letter-spacing: var(--main-letter-spacing);
+}
+
+@media (max-width: 425px) {
+  :root {
+    --main-padding: 20px;
+  }
+
+  .container {
+    background-image: url(../images/bg-mobile.png);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .main-content {
+    width: 85%;
+  }
+  .storage-card .storage-state {
+    top: unset;
+    right: unset;
+    bottom: -30px;
+    left: 50%;
+    margin-left: -70px;
+  }
+  .storage-card .storage-state::before {
+    display: none;
+  }
+}
