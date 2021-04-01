@@ -1,4 +1,4 @@
-live preview ==> [click here](https://mtanash-single-price-grid-component.netlify.app/)
+live preview ==> [click here](https://mtanash-fylo-data-storage-component.netlify.app/)
 
 ---
 
